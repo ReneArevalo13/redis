@@ -8,7 +8,6 @@
 #include <sys/socket.h>
 #include <netinet/ip.h>
 
-
 static void msg(const char *msg) { 
     fprintf(stderr, "%s\n", msg);
 }
@@ -40,6 +39,8 @@ setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
 // bind to an address 
 
 struct sockaddr_in addr = {};
+
+
 
 addr.sin_family = AF_INET;
 addr.sin_port = ntohs(1234);
